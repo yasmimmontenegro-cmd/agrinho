@@ -1,1 +1,115 @@
 
+// Projeto: Sistema de Irrigação Inteligente
+//Evento: Concurso Agrinho
+//Tema: Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrinho: Agro Forte, Futuro Sustentável</title>
+<style>
+:root {
+--primary: #2e7d32;
+--secondary: #1565c0;
+--background: #f5f5f5;
+--card-bg: #ffffff;
+ --text: #333333;
+ }
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--background);
+color: var(--text);
+margin: 0;
+padding: 0;
+ }
+beader {
+background-color: var(--primary);
+color: white;
+text-align: center;
+padding: 2rem 1rem;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+header h1 {
+margin: 0;
+font-size: 2rem;
+}
+header p {
+ margin: 0.5rem 0 0 0;
+font-style: italic;
+opacity: 0.9;
+}
+main {
+max-width: 1200px;
+margin: 2rem auto;
+padding: 0 1rem;
+}
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 1.5rem;
+}
+.card {
+background: var(--card-bg);
+border-radius: 8px;
+padding: 1.5rem;
+box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+text-align: center;
+}
+.card h2 {
+margin-top: 0;
+color: var(--primary);
+}
+.dado {
+font-size: 2.5rem;
+font-weight: bold;
+margin: 1rem 0;
+}
+.status-on {
+ color: var(--secondary);
+ }
+.status-off {
+color: #757575;
+ }
+footer {
+text-align: center;
+padding: 2rem;
+margin-top: 4rem;
+background-color: #e0e0e0;
+ font-size: 0.9rem;
+}
+ </style>
+</head>
+<body>
+<header>
+ <h1>Sistema de Irrigação Inteligente</h1>
+ <p>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</p>
+</header>
+ <main>
+<section class="grid">
+<div class="card">
+<h2>Umidade do Solo</h2>
+<div class="dado" id="umidade">45%</div>
+<p>Status: <span id="status-solo">Ideal</span></p>
+ </div>
+<div class="card">
+<h2>Válvula de Irrigação</h2>
+<div class="dado status-off" id="bomba">DESLIGADA</div>
+<p>Economizando recursos hídricos</p>
+</div>
+<div class="card">
+<h2>Economia de Água</h2>
+<div class="dado" style="color: var(--primary);" id="economia">320L</div>
+ <p>Evitado por automação</p>
+ </div>
+</section>
+ </main>
+<footer>
+<p>Projeto Integrador - Concurso Agrinho</p>
+</footer>
+<script>
+ // Esqueleto para futura integração com a API do Arduino/ESP32
+console.log("Dashboard pronto para receber dados via WebSocket ou Fetch API.");
+ </script>
+</body>
+</html>

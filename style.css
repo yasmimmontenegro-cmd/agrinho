@@ -1,1 +1,290 @@
+/* ==========================================================================
+   VARIÁVEIS GLOBAIS (Cores e Temas)
+   ========================================================================== */
+:root {
+    --primary: #2e7d32;      /* Verde sustentável (Agro) */
+    --secondary: #1565c0;    /* Azul para água/tecnologia */
+    --background: #f1f5f9;   /* Cinza claro moderno para o fundo */
+    --card-bg: #ffffff;      /* Branco para os cards */
+    --text-main: #1e293b;    /* Cinza escuro para textos principais */
+    --text-muted: #64748b;   /* Cinza médio para subtítulos */
+    --success: #10b981;      /* Verde para status positivo */
+    --danger: #ef4444;       /* Vermelho para alertas se necessário */
+}
 
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   HEADER (Cabeçalho)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, var(--primary), #1b5e20);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   LAYOUT E CONTEÚDO PRINCIPAL
+   ========================================================================== */
+main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Grid que organiza os cards proporcionalmente */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* ==========================================================================
+   CARDS (Painéis de Dados)
+   ========================================================================== */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-top: 5px solid var(--primary); /* Detalhe verde no topo do card */
+}
+
+/* Efeito sutil ao passar o mouse por cima */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilização dos números gigantes (Dados) */
+.dado {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 1.5rem 0;
+    color: var(--text-main);
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   ESTADOS E STATUS (Cores Dinâmicas)
+   ========================================================================== */
+#status-solo {
+    font-weight: 600;
+    color: var(--success);
+}
+
+.status-on {
+    color: var(--secondary) !important;
+}
+
+.status-off {
+    color: #94a3b8 !important;
+}
+
+/* Modificação específica para o card de válvula se estiver ativo */
+.card:has(.status-on) {
+    border-top-color: var(--secondary);
+}
+
+/* ==========================================================================
+   FOOTER (Rodapé)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+    background-color: #cbd5e1;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+/* ==========================================================================
+   VARIÁVEIS GLOBAIS (Cores e Temas)
+   ========================================================================== */
+:root {
+    --primary: #2e7d32;      /* Verde sustentável (Agro) */
+    --secondary: #1565c0;    /* Azul para água/tecnologia */
+    --background: #f1f5f9;   /* Cinza claro moderno para o fundo */
+    --card-bg: #ffffff;      /* Branco para os cards */
+    --text-main: #1e293b;    /* Cinza escuro para textos principais */
+    --text-muted: #64748b;   /* Cinza médio para subtítulos */
+    --success: #10b981;      /* Verde para status positivo */
+    --danger: #ef4444;       /* Vermelho para alertas se necessário */
+}
+
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--background);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   HEADER (Cabeçalho)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, var(--primary), #1b5e20);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   LAYOUT E CONTEÚDO PRINCIPAL
+   ========================================================================== */
+main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Grid que organiza os cards proporcionalmente */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* ==========================================================================
+   CARDS (Painéis de Dados)
+   ========================================================================== */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-top: 5px solid var(--primary); /* Detalhe verde no topo do card */
+}
+
+/* Efeito sutil ao passar o mouse por cima */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilização dos números gigantes (Dados) */
+.dado {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 1.5rem 0;
+    color: var(--text-main);
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   ESTADOS E STATUS (Cores Dinâmicas)
+   ========================================================================== */
+#status-solo {
+    font-weight: 600;
+    color: var(--success);
+}
+
+.status-on {
+    color: var(--secondary) !important;
+}
+
+.status-off {
+    color: #94a3b8 !important;
+}
+
+/* Modificação específica para o card de válvula se estiver ativo */
+.card:has(.status-on) {
+    border-top-color: var(--secondary);
+}
+
+/* ==========================================================================
+   FOOTER (Rodapé)
+   ========================================================================== */
+footer {
+    text-align: center;
+    paddin<link rel="stylesheet" href="style.css">g: 2rem 1rem;
+    margin-top: 5rem;
+    background-color: #cbd5e1;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+}<link rel="stylesheet" href="style.css">
